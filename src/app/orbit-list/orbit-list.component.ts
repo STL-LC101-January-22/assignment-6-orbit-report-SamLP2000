@@ -28,12 +28,16 @@ export class OrbitListComponent implements OnInit {
   }
   zebra(): boolean {
     if (!this.color) {
-      this.color = true;
-      this.zebraOtherStripe = false;
+      setTimeout(() => {
+        this.color = true;
+        this.zebraOtherStripe = false;
+      });
       return this.color;
     } else if (this.color) {
-      this.color = false;
-      this.zebraOtherStripe = true;
+      setTimeout(() => {
+        this.color = false;
+        this.zebraOtherStripe = true;
+      });
       return this.color;
     }
   }
