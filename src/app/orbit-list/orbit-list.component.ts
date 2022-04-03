@@ -10,14 +10,10 @@ export class OrbitListComponent implements OnInit {
   @Input() satellites: Satellite[];
   constructor() {}
 
-  ngOnInit() {
-    let zebraOtherStripe: boolean;
-    let color: boolean;
-    zebraOtherStripe = true;
-    color = false;
-  }
-  color = false;
+  ngOnInit() {}
   zebraOtherStripe = true;
+  color = false;
+
   sort(column: string): void {
     // array.sort modifies the array, sorting the items based on the given compare function
     this.satellites.sort(function (a: Satellite, b: Satellite): number {
@@ -31,12 +27,16 @@ export class OrbitListComponent implements OnInit {
   }
   zebra(): boolean {
     if (!this.color) {
-      this.color = true;
-      this.zebraOtherStripe = false;
+      setTimeout(() => {
+        this.color = true;
+        this.zebraOtherStripe = false;
+      });
       return this.color;
     } else if (this.color) {
-      this.color = false;
-      this.zebraOtherStripe = true;
+      setTimeout(() => {
+        this.color = false;
+        this.zebraOtherStripe = true;
+      });
       return this.color;
     }
   }
