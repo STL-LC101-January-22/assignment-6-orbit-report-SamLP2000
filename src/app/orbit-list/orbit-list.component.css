@@ -28,10 +28,10 @@ td {
   padding: 6px;
 }
 
-.rowOne {
+.data-row:nth-child(odd) {
   background: purple;
 }
 
-.rowTwo {
+.data-row:nth-child(even) {
   background: orangered;
 }

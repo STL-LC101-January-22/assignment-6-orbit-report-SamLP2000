@@ -11,8 +11,6 @@ export class OrbitListComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {}
-  zebraOtherStripe = true;
-  color = false;
 
   sort(column: string): void {
     // array.sort modifies the array, sorting the items based on the given compare function
@@ -24,20 +22,5 @@ export class OrbitListComponent implements OnInit {
       }
       return 0;
     });
-  }
-  zebra(): boolean {
-    if (!this.color) {
-      setTimeout(() => {
-        this.color = true;
-        this.zebraOtherStripe = false;
-      });
-      return this.color;
-    } else if (this.color) {
-      setTimeout(() => {
-        this.color = false;
-        this.zebraOtherStripe = true;
-      });
-      return this.color;
-    }
   }
 }

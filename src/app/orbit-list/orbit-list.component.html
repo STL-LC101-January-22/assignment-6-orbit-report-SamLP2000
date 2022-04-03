@@ -6,12 +6,7 @@
     <th>Orbit Type</th>
     <th>Launch Date</th>
   </tr>
-  <tr
-    class="data-row"
-    *ngFor="let satellite of satellites"
-    [class.rowOne]="zebra()"
-    [class.rowTwo]="zebraOtherStripe"
-  >
+  <tr class="data-row" *ngFor="let satellite of satellites">
     <td>
       {{ satellite.name }}
     </td>
